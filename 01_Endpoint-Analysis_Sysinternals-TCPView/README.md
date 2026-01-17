@@ -1,8 +1,6 @@
 # 🖥️ Endpoint Analysis: Identifying Running Processes & Network Connections
 
-
-
-## 📖 Project Overview
+### 📖 Project Overview
 This implementation focuses on host-based security monitoring. By utilizing the **Microsoft Sysinternals Suite**, I analyzed active processes and their associated network endpoints (TCP/UDP) to identify baseline system behavior and user-initiated activity.
 
 ## 🚀 Execution Steps
