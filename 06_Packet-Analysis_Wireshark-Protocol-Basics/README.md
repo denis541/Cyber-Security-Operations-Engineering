@@ -30,7 +30,7 @@ This project focuses on **Deep Packet Inspection (DPI)** within a virtualized So
 | **Filter** | `icmp` | Isolating ICMP traffic within the capture buffer. |
 
 ## 📊 Visual Evidence
-![Wireshark Packet Dissection](./screenshots/02-icmp-packet-dissection.png)
+![Wireshark Packet Dissection](./Screenshots/02-icmp-packet-dissection.png)
 *Figure 1: Analysis of the 3-pane Wireshark view, highlighting the ICMP payload and Ethernet headers.*
 
 ---
