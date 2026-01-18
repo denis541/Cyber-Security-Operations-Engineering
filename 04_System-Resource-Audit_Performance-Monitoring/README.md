@@ -1,7 +1,8 @@
 # 📉 System Resource Auditing & Event Log Analysis
 
-![Security](https://img.shields.io/badge/security-passed-brightgreen)
-![Tool](https://img.shields.io/badge/tool-active-blue)
+![Monitoring Tools](https://img.shields.io/badge/Monitoring-Tools-blueviolet?logo=tools)
+![Log Monitoring](https://img.shields.io/badge/Log%20Monitoring-Enabled-red?logo=logstash)
+![Metrics](https://img.shields.io/badge/System%20Metrics-Collecting-informational?logo=graph)
 
 ## 📖 Executive Summary
 This project demonstrates **Host-Based Monitoring** and **Service Management** on a Windows endpoint. The objective was to audit system resource consumption and analyze **Event Logs** to verify service state changes—a critical skill for identifying unauthorized system modifications or resource-exhaustion attacks.
