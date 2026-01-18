@@ -1,7 +1,10 @@
 # 🌐 Network Path Analysis: ICMP Diagnostics & Route Tracing
 
-![Security](https://img.shields.io/badge/security-passed-brightgreen)
-![Tool](https://img.shields.io/badge/tool-active-blue)
+![Traceroute](https://img.shields.io/badge/Traceroute-Path%20Analysis-blue?logo=mapbox)
+![ICMP Echo](https://img.shields.io/badge/ICMP-Echo%20Requests-green?logo=signal)
+![Ping](https://img.shields.io/badge/Ping-Latency%20Testing-yellow?logo=wifi)![Network Diagnostics](https://img.shields.io/badge/Network-Diagnostics-critical?logo=activitypub)
+![Packet Flow](https://img.shields.io/badge/Packet%20Flow-Analyzing-red?logo=arxiv)
+![Connectivity Test](https://img.shields.io/badge/Connectivity-Test-blueviolet?logo=connectdevelop)
 
 ## 📖 Executive Summary
 This project demonstrates the use of **ICMP-based diagnostic tools** to verify network reachability and analyze the geographical path of data packets. By utilizing `ping` and `traceroute`, I mapped the logical and physical "hops" between a local source and international destinations, simulating a real-world **Network Troubleshooting** scenario.
