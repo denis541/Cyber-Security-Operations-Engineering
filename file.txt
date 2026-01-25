@@ -1,1 +1,31 @@
 file integrity management FIMS wazuh ossec and others to auto matically see changes in files and folders 
+network protocols (Zeek/Suricata) and endpoint telemetry (Wazuh/Sysmon).
+ "I built a custom logging pipeline using Sysmon and Splunk" is more impressive than saying "I
+"I monitored file integrity by configuring Wazuh agents to track SHA-256 hash changes in critical system directories and forwarded those logs to a central analyzer,"
+data integrity using monitoring tools and forwading them to the siem and visualizing them 
+The "Modular Analyst" Workflow
+You can master the functions of Security Onion without the weight of Security Onion. Here is how you split the functions:
+1. Focus: Network Attacks (The "Suricata" Phase)
+The Goal: Detect Nmap scans or malicious traffic.
+The "Lite" Method: Run your Kali/Parrot VM and your Host. Use Wireshark on your host to capture the "attack" traffic.
+What you skip: Data integrity. You are focusing purely on the "Wire."
+2. Focus: Data Integrity (The "Wazuh" Phase)
+The Goal: Detect if a file was changed (FIM).
+The "Lite" Method: Run your Windows 10 VM and your Splunk Host. Run your PowerShell hashing script or Sysmon.
+What you skip: Network scanning. You are focusing purely on the "Disk."
+3. Focus: Log Analysis (The "Elastic/Splunk" Phase)
+The Goal: Searching and correlating.
+The "Lite" Method: Turn off all VMs. Just run Splunk on your host and analyze the data you collected in the previous steps.
+What you skip: Real-time generation. You are focusing purely on the "Intelligence."
+Organize your GitHub/CV by "Tactics"
+When you document your work, group your findings under the MITRE ATT&CK Tactics:
+Persistence: "I monitored registry keys for T1547.001 (Boot or Logon Autostart Execution)."
+Defense Evasion: "I used file hashing to detect T1222 (File and Directory Permissions Modification)."
+Discovery: "I used network logs to alert on T1046 (Network Service Discovery)."
+"I used the MITRE ATT&CK framework to structure my lab work. I focused on techniques like File Hashing (T1070.006) to ensure I had the right telemetry in my Splunk instance, which validated my ability to detect evidence tampering."
+
+Security Operations & Engineering
+SIEM Implementation: Deployed and managed a Splunk Enterprise environment to aggregate telemetry from Windows and Linux endpoints.
+Threat Detection: Developed custom Sysmon configurations and PowerShell scripts to perform File Integrity Monitoring (FIM) via SHA-256 hashing.
+Adversary Emulation: Validated defensive visibility by executing Atomic Red Team tests mapped to the MITRE ATT&CK Framework.
+Analysis & Reporting: Created automated dashboards and alerts to monitor for indicators of compromise (IoCs) and network anomalies.
