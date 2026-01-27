@@ -1,3 +1,11 @@
+ Splunk: https://lnkd.in/d2YR_wYA
+• Windows Forensics: https://lnkd.in/ds6RT2Yf
+• Log Analysis: https://lnkd.in/dhAZvesz
+• Active Directory: https://lnkd.in/d5uPB29b
+• Security Assessments: https://lnkd.in/dCdn9G8P
+• Vulnerability Management: https://lnkd.in/diYtukyY
+• Malware Analysis: https://lnkd.in/dfq-u4HS
+
 file integrity management FIMS wazuh ossec and others to auto matically see changes in files and folders 
 network protocols (Zeek/Suricata) and endpoint telemetry (Wazuh/Sysmon).
  "I built a custom logging pipeline using Sysmon and Splunk" is more impressive than saying "I
