@@ -14,7 +14,7 @@ This project provides a series of Linux-based processing scripts designed to per
 - **Core Tools:** AWK, Bash, Sed
 - **Log Types Handled:** Apache Web Logs, Custom Application Logs (Pipe-delimited).
 
-## Key Functionalities
+## Key Functionalities.
 - **Timestamp Conversion:** Automated conversion of Unix Epoch strings to Human-Readable (UTC) format using internal AWK `strftime` functions.
 - **Schema Standardization:** Parsing of non-standard delimiters (`|`) to ensure consistent field mapping.
 - **Data Sanitization:** Removal of EOF (End of File) artifacts and whitespace inconsistencies that frequently cause ingestion failures in log parsers.
