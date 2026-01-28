@@ -6,7 +6,7 @@
 ![OS Windows](https://img.shields.io/badge/OS-Windows-blue?style=for-the-badge&logo=windows)
 ![Audit Manual Trigger](https://img.shields.io/badge/Audit-Manual_Trigger-orange?style=for-the-badge)
 
-## Project Overview
+## Project Overview.
 This utility provides a standardized method for cryptographic validation of file integrity using PowerShell's `Get-FileHash` cmdlet. It is designed to mitigate the risk of data corruption or unauthorized file substitution by comparing binary-level SHA-256 signatures.
 
 # Security Context: Execution Policies
