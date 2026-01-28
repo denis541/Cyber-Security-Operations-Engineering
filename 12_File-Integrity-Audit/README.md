@@ -14,7 +14,7 @@ Windows systems implement an Execution Policy as a primary defense mechanism aga
 
 **Default State:** Most systems are set to Restricted, which prevents all scripts from running, regardless of their source.  
 **The Constraint:** This policy often blocks legitimate administrative tools and locally authored scripts, resulting in a PSSecurityException.  
-**Operational Workaround:** Temporary Bypass  
+**Operational Workaround:** Temporary Bypass.  
 
 To execute this utility without compromising the long-term security posture of the host system, we employ a Process-Level Bypass.  
 Instead of permanently altering the system registry via Set-ExecutionPolicy, we utilize a scoped execution flag. This allows the script to run within a single, isolated session. Once the PowerShell process terminates, the system's original security restrictions remain fully intact.
