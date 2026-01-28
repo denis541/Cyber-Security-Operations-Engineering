@@ -27,5 +27,5 @@ awk 'BEGIN {FS="|"; OFS="|"} {$3=strftime("%c",$3)} {print}' raw_log_file.log > 
 ```
 
 
-## Operational Impact
+## Operational Impact.
 By implementing these normalization techniques, the time-to-analysis for security incidents is significantly reduced. Analysts can perform accurate cross-platform timeline analysis without manual time-conversion—ensuring that events from web servers and internal applications are perfectly synchronized during an investigation.
