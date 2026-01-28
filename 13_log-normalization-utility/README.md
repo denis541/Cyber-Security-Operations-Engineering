@@ -20,7 +20,7 @@ This project provides a series of Linux-based processing scripts designed to per
 - **Data Sanitization:** Removal of EOF (End of File) artifacts and whitespace inconsistencies that frequently cause ingestion failures in log parsers.
 - **Security Onion Integration:** Prepared datasets for ingestion into the Elastic Stack (ELK) for centralized monitoring.
 
-## Usage
+## Usage.
 To normalize a raw application log with Epoch timestamps in the 3rd column:
 ```bash
 awk 'BEGIN {FS="|"; OFS="|"} {$3=strftime("%c",$3)} {print}' raw_log_file.log > normalized_log.log
