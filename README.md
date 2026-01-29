@@ -17,12 +17,16 @@
 
 This repository documents comprehensive security operations analysis capabilities developed through systematic, hands-on investigation of simulated production security incidents. The work demonstrates proficiency across the full spectrum of SOC analyst responsibilities, from initial alert triage through to comprehensive incident documentation and escalation.
 
-###  **Core Competencies Validated**
-- **Incident Triage & Analysis** – Methodical investigation of security events
-- **Endpoint Forensics** – Deep behavioral analysis across Windows environments  
-- **Network Forensics** – Protocol-level traffic examination and anomaly detection
-- **Detection Engineering** – Log normalization and security event correlation
-- **Threat Intelligence Application** – Contextualization of attacker TTPs
+## Operational Workflows Demonstrated
+
+The repository reflects structured security operations workflows aligned with industry-standard incident analysis and response practices.
+
+| Phase | Activities | Tools & Techniques |
+|------|-----------|-------------------|
+| **Evidence Collection** | Endpoint artifact acquisition, network packet capture, centralized log aggregation | Sysinternals Suite, Wireshark, PowerShell |
+| **Analysis & Correlation** | Timeline reconstruction, cross-source validation, indicator extraction and enrichment | Timeline analysis methodologies, event correlation techniques, cryptographic hash validation |
+| **Impact Assessment** | Scope determination, severity classification, affected asset identification | Business impact analysis, risk assessment frameworks |
+| **Documentation & Reporting** | Incident reporting, executive summary preparation, evidence preservation | Standardized reporting formats, chain-of-custody practices |
 
 ---
 
