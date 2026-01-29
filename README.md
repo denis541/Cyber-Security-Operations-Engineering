@@ -221,11 +221,12 @@ The analytical capabilities demonstrated align with the knowledge domains covere
 
 - **GIAC Certified Forensic Analyst (GCFA)**  
   Advanced digital forensics and artifact analysis methodologies.
+  
 
 # Professional Contact
-Denis O. Onduso
+### Name: Denis O. Onduso
 
-Security Operations & Cybersecurity Analyst
+### Scope: Security Operations & Cybersecurity Analyst
 
 ### Email:  Denis.Onduso@outlook.com
 
