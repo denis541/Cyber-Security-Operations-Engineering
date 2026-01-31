@@ -51,7 +51,7 @@ The repository reflects structured security operations workflows aligned with in
 - **PowerShell Activity Auditing**  
   Analysis of script block logging, command-line arguments, and execution context to identify abuse of PowerShell for post-compromise activity.
 
-### Network Security Analysis
+### Network Security Analysis.
 
 ![Protocol Analysis](https://img.shields.io/badge/Protocol-Analysis-4ECDC4?style=for-the-badge)
 ![Wireshark](https://img.shields.io/badge/Tool-Wireshark-1679C2?style=for-the-badge)
