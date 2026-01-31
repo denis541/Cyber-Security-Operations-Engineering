@@ -1,6 +1,6 @@
 ![Log Types](https://img.shields.io/badge/Logs-Apache%20%7C%20Custom-lightgrey)
 ![Security Onion Ready](https://img.shields.io/badge/Security%20Onion-Ready-6A5ACD)
-![AWK](https://img.shields.io/badge/Tool-AWK-yellow)
+![AWK](https://img.shields.io/badge/Tool-AWK-yellow)  
 ![sed](https://img.shields.io/badge/Tool-sed-orange)
 ![Platform: Linux](https://img.shields.io/badge/Platform-Linux-blue?logo=linux)
 ![Bash](https://img.shields.io/badge/Scripting-Bash-green?logo=gnu-bash)
