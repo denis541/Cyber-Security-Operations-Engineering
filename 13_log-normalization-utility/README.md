@@ -1,4 +1,4 @@
-   ![Log Types](https://img.shields.io/badge/Logs-Apache%20%7C%20Custom-lightgrey)
+![Log Types](https://img.shields.io/badge/Logs-Apache%20%7C%20Custom-lightgrey)
 ![Security Onion Ready](https://img.shields.io/badge/Security%20Onion-Ready-6A5ACD)
 ![AWK](https://img.shields.io/badge/Tool-AWK-yellow)
 ![sed](https://img.shields.io/badge/Tool-sed-orange)
