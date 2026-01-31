@@ -29,7 +29,7 @@ The repository reflects structured security operations workflows aligned with in
 | **Documentation & Reporting** | Incident reporting, executive summary preparation, evidence preservation | Standardized reporting formats, chain-of-custody practices |
 
 ---
-## Technical Analysis Capabilities
+## Technical Analysis Capabilities.
 
 ### Endpoint Security Analysis
 
