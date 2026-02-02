@@ -4,7 +4,7 @@
 ![Incident Response](https://img.shields.io/badge/Specialization-Incident_Response-FF6B6B)  
 ![Threat Hunting](https://img.shields.io/badge/Focus-Threat_Hunting-00B894)
 ![Forensics](https://img.shields.io/badge/Expertise-Digital_Forensics-6C5CE7)     
-      
+        
 **Author:** Denis O. Onduso        
 
 **Security Domain:** Security Operations Center (SOC) | Digital Forensics | Detection Engineering    
