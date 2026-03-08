@@ -1,39 +1,96 @@
-# 🌐 Network Path Analysis: ICMP Diagnostics & Route Tracing
+# Network Path Analysis: ICMP Diagnostics & Route Tracing
 
-![Traceroute](https://img.shields.io/badge/Traceroute-Path%20Analysis-blue?logo=mapbox)
-![ICMP Echo](https://img.shields.io/badge/ICMP-Echo%20Requests-green?logo=signal)
-![Ping](https://img.shields.io/badge/Ping-Latency%20Testing-yellow?logo=wifi)![Network Diagnostics](https://img.shields.io/badge/Network-Diagnostics-critical?logo=activitypub)
-![Packet Flow](https://img.shields.io/badge/Packet%20Flow-Analyzing-red?logo=arxiv)
-![Connectivity Test](https://img.shields.io/badge/Connectivity-Test-blueviolet?logo=connectdevelop)
+![Wireshark](https://img.shields.io/badge/Tool-Wireshark-1679C2?style=flat&logo=wireshark&logoColor=white)
+![Linux](https://img.shields.io/badge/Platform-Linux_CLI-FCC624?style=flat&logo=linux&logoColor=black)
+![Domain](https://img.shields.io/badge/Domain-Network_Forensics-4CAF50?style=flat&logoColor=white)
 
-## 📖 Executive Summary
-This project demonstrates the use of **ICMP-based diagnostic tools** to verify network reachability and analyze the geographical path of data packets. By utilizing `ping` and `traceroute`, I mapped the logical and physical "hops" between a local source and international destinations, simulating a real-world **Network Troubleshooting** scenario.
-
-## 🚀 Technical Implementations
-
-### 1. Connectivity Validation (ICMP Echo Request)
-- **Task:** Verified end-to-end connectivity to remote mirrors (e.g., Akamai Edge).
-- **Analyst Insight:** Confirmed 0% packet loss and analyzed **Round-Trip Time (RTT)**. Monitoring latency (measured in ms) is a primary method for detecting network congestion or potential **Man-in-the-Middle (MitM)** delays.
-
-### 2. Multi-Hop Route Analysis
-- **Task:** Executed `traceroute` via the Linux CLI to identify every Layer 3 device (router) in the transmission path.
-- **Investigation:** Analyzed the path to Regional Internet Registry (RIR) websites (e.g., RIPE, AFRINIC).
-- **Forensic Observation:** Identified the transition points between local ISPs and international backbones. This visibility is critical for **Network Forensic** investigations to determine where a packet may have been dropped or intercepted.
-
-### 3. Geographical Mapping & Visual Tracing
-- **Task:** Utilized web-based visual traceroute tools to map the physical location of responding hops.
-- **Finding:** Observed the "meshed" nature of the internet, where packets often traverse multiple countries before reaching their final destination.
-
-## 💻 Technical Reference
-| Command | Professional Use Case |
-| :--- | :--- |
-| `ping -c 4 [Target]` | Rapid reachability testing and latency baseline. |
-| `traceroute [Target]` | Identifying the specific router causing a bottleneck. |
-| `> [filename].txt` | Exporting CLI output for incident reports and documentation. |
-
-## 📊 Visual Evidence
-![Traceroute CLI Output](./Screenshots/cli-traceroute-hops.png)
-*Figure 1: Hop-by-hop analysis showing path latency and ISP handoffs.*
+**Analyst:** Denis O. Onduso  
+**Focus:** ICMP-based reachability testing, hop-by-hop route mapping, ISP handoff identification, latency baseline establishment
 
 ---
-*Documentation developed for **CyberOps Associate** portfolio.*
+
+## Objective
+
+Use ICMP diagnostic tools to map the full Layer 3 path between a local host and international destinations, establish latency baselines, and identify ISP handoff points — building the network path visibility used during traffic anomaly investigations and MitM detection.
+
+---
+
+## Environment
+
+- Linux CLI
+- Tools: `ping`, `traceroute`, web-based visual traceroute for geographic hop mapping
+- Targets: Regional Internet Registry sites (RIPE, AFRINIC) and Akamai edge nodes
+
+---
+
+## Analysis
+
+### Connectivity Validation — ICMP Echo Requests
+
+`ping -c 4` was run against multiple remote targets to establish baseline reachability and RTT:
+
+- 0% packet loss confirmed on all tested targets under normal conditions
+- RTT values provided a latency baseline against which future deviations can be measured
+- Consistent RTT across multiple runs ruled out transient congestion on the local segment
+
+In an investigative context, anomalous RTT increases to a known destination — particularly if sudden and sustained — can indicate path changes, traffic redirection, or an interception point introducing processing delay. The baseline established here makes that kind of deviation detectable.
+
+### Route Tracing — Hop-by-Hop Path Reconstruction
+
+`traceroute` was executed against RIPE and AFRINIC to map the full path from the local host to international destinations:
+
+- First 2–3 hops: local ISP infrastructure (RFC 1918 or ISP-assigned addresses)
+- Mid-path: transit provider handoffs — points where local ISP traffic exits to international backbone carriers
+- Final hops: destination-side infrastructure at the target RIR
+
+Several intermediate hops returned `* * *` (no ICMP TTL-exceeded response), which is common at carrier boundaries where routers are configured to drop ICMP. This is expected behavior and does not indicate a problem — but in a forensic context, a sudden increase in non-responding hops on a path that previously resolved fully warrants investigation.
+
+### Geographic Mapping
+
+Visual traceroute tools were used to map the physical location of responding hops. Key observations:
+
+- Packets from the local host to European RIR destinations transited through multiple countries before reaching the target
+- The path was not geographically linear — routing decisions reflected BGP policy and peering agreements, not physical proximity
+- No unexpected geographic detours were identified that would suggest traffic manipulation
+
+Understanding normal routing geography matters in forensic investigations involving data exfiltration or traffic interception — an unexpected country-level detour in an otherwise stable path is an anomaly worth flagging.
+
+---
+
+## Key Findings
+
+Baseline RTT and path were established to multiple international destinations. All paths showed expected ISP-to-backbone handoff behavior. Non-responding hops at carrier boundaries were consistent with standard ICMP filtering policy. No path anomalies, unexpected geographic detours, or packet loss events were observed. This baseline documents normal routing behavior for this endpoint and network segment.
+
+---
+
+## Commands Reference
+
+| Command | Investigative Use |
+|---------|-------------------|
+| `ping -c 4 <target>` | Reachability testing and RTT baseline establishment |
+| `traceroute <target>` | Hop-by-hop path mapping; identifying bottlenecks or path changes |
+| `traceroute -I <target>` | ICMP-mode traceroute (useful when UDP probes are filtered) |
+| `traceroute -n <target>` | Suppress DNS resolution for faster output and cleaner IP logging |
+| `> output.txt` | Redirect CLI output to file for documentation and reporting |
+
+---
+
+## Tools
+
+- **ping** — ICMP echo request/reply; latency and packet loss measurement
+- **traceroute** — TTL-based hop enumeration for path reconstruction
+- **Visual traceroute** — geographic mapping of responding hops
+
+---
+
+## MITRE ATT&CK Relevance
+
+| Technique | ID | Relevance |
+|-----------|----|-----------|
+| Network Service Discovery | T1046 | Understanding path topology supports detection of scanning activity |
+| Remote System Discovery | T1018 | Hop enumeration reveals intermediate infrastructure |
+| Adversary-in-the-Middle | T1557 | RTT baseline enables detection of interception-induced latency anomalies |
+| Traffic Signaling | T1205 | Unusual ICMP behavior (unexpected responses, modified TTL) can indicate covert channel use |
+
+![Traceroute CLI Output](./Screenshots/cli-traceroute-hops.png)
+*Hop-by-hop path output showing latency per hop and ISP handoff points*
