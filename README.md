@@ -6,7 +6,7 @@
 ![Windows](https://img.shields.io/badge/Sysinternals-0078D4?style=flat&logo=windows&logoColor=white)
 ![MITRE ATT&CK](https://img.shields.io/badge/MITRE_ATT%26CK-E01B1B?style=flat&logoColor=white)
 ![Zeek](https://img.shields.io/badge/Zeek-2F6FAD?style=flat&logoColor=white)
-![Security Onion](https://img.shields.io/badge/Security_Onion-4CAF50?style=flat&logoColor=white)
+![Security Onion](https://img.shields.io/badge/Security_Onion-4CAF50?style=flat&logoColor=white) 
 ![Volatility](https://img.shields.io/badge/Volatility_Framework-6C3483?style=flat&logoColor=white)
 ![NIST](https://img.shields.io/badge/NIST_CSF-003087?style=flat&logoColor=white) 
 ![MIT License](https://img.shields.io/badge/License-MIT-lightgrey?style=flat)
